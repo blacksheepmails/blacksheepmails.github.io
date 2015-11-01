@@ -4210,6 +4210,21 @@ Elm.Main.make = function (_elm) {
                                                                    ,_0: "adjacent sides linked"
                                                                    ,_1: A2($Stamps.makeSquare2Stamp,
                                                                    70,
+                                                                   0)}
+                                                                  ,{ctor: "_Tuple2"
+                                                                   ,_0: "opposite sides fliped"
+                                                                   ,_1: A2($Stamps.makeSquare3Stamp,
+                                                                   70,
+                                                                   0)}
+                                                                  ,{ctor: "_Tuple2"
+                                                                   ,_0: "adjacent sides flipped"
+                                                                   ,_1: A2($Stamps.makeSquare4Stamp,
+                                                                   70,
+                                                                   0)}
+                                                                  ,{ctor: "_Tuple2"
+                                                                   ,_0: "opposite flipped 1 pair"
+                                                                   ,_1: A2($Stamps.makeSquare5Stamp,
+                                                                   70,
                                                                    0)}])}
                                                ,{ctor: "_Tuple2"
                                                 ,_0: "Hexagon"
@@ -4250,7 +4265,7 @@ Elm.Main.make = function (_elm) {
             switch (_v0.ctor)
             {case "Just": return _v0._0;}
             _U.badCase($moduleName,
-            "on line 64, column 29 to 73");
+            "on line 69, column 29 to 73");
          }(),
          squareDists);
          return _U.eq(index,
@@ -4279,7 +4294,7 @@ Elm.Main.make = function (_elm) {
             switch (_v2.ctor)
             {case "Just": return _v2._0;}
             _U.badCase($moduleName,
-            "on line 56, column 34 to 81");
+            "on line 61, column 34 to 81");
          }(),
          squareDistSums);
          return A2($Basics._op["++"],
@@ -4349,12 +4364,12 @@ Elm.Main.make = function (_elm) {
                                    ,_1: _v4._1}) : distFromLine;
                                 }();}
                            _U.badCase($moduleName,
-                           "between lines 24 and 35");
+                           "between lines 29 and 40");
                         }();}
                    break;}
               break;}
          _U.badCase($moduleName,
-         "between lines 24 and 35");
+         "between lines 29 and 40");
       }();
    });
    var getClosestSide = F2(function (_v16,
@@ -4382,7 +4397,7 @@ Elm.Main.make = function (_elm) {
                                           switch (_v28.ctor)
                                           {case "Just": return _v28._0;}
                                           _U.badCase($moduleName,
-                                          "on line 44, column 49 to 83");
+                                          "on line 49, column 49 to 83");
                                        }()
                                        ,_1: $Util.end(_v20._1)});
                                        return _U.cmp(currDist,
@@ -4393,10 +4408,10 @@ Elm.Main.make = function (_elm) {
                                                                        ,_1: _v21._1};
                                     }();}
                                _U.badCase($moduleName,
-                               "between lines 44 and 47");
+                               "between lines 49 and 52");
                             }();}
                        _U.badCase($moduleName,
-                       "between lines 44 and 47");
+                       "between lines 49 and 52");
                     }();
                  });
                  var indexedSides = A2($List.indexedMap,
@@ -4414,7 +4429,7 @@ Elm.Main.make = function (_elm) {
                  indexedSides));
               }();}
          _U.badCase($moduleName,
-         "between lines 40 and 49");
+         "between lines 45 and 54");
       }();
    });
    var updateStamp = F3(function (point,
@@ -4485,7 +4500,7 @@ Elm.Main.make = function (_elm) {
                                   switch (_v37.ctor)
                                   {case "Just": return _v37._0;}
                                   _U.badCase($moduleName,
-                                  "on line 109, column 84 to 134");
+                                  "on line 114, column 84 to 134");
                                }()))]],
               model);
             case "SelectShape":
@@ -4581,7 +4596,7 @@ Elm.Main.make = function (_elm) {
                                  $Basics.toString(model.pattern),
                                  _v39._0)]));}
                             _U.badCase($moduleName,
-                            "between lines 166 and 168");
+                            "between lines 174 and 176");
                          }();
                       }),
                       function () {
@@ -4591,7 +4606,7 @@ Elm.Main.make = function (_elm) {
                          switch (_v43.ctor)
                          {case "Just": return _v43._0;}
                          _U.badCase($moduleName,
-                         "on line 170, column 34 to 84");
+                         "on line 178, column 34 to 84");
                       }())) : A2($Html.div,
                       _L.fromArray([]),
                       _L.fromArray([]))]));
@@ -4632,7 +4647,7 @@ Elm.Main.make = function (_elm) {
               _v45._0,
               _v45._1);}
          _U.badCase($moduleName,
-         "on line 184, column 45 to 105");
+         "on line 192, column 45 to 105");
       }();
    }),
    $Mouse.isDown,
@@ -12949,7 +12964,7 @@ Elm.Stamps.make = function (_elm) {
                switch (_v0.ctor)
                {case "_Tuple3": return _v0._2;}
                _U.badCase($moduleName,
-               "on line 208, column 33 to 34");
+               "on line 322, column 33 to 34");
             }();
          };
          var dir = function (_v5) {
@@ -12957,7 +12972,7 @@ Elm.Stamps.make = function (_elm) {
                switch (_v5.ctor)
                {case "_Tuple3": return _v5._1;}
                _U.badCase($moduleName,
-               "on line 207, column 28 to 29");
+               "on line 321, column 28 to 29");
             }();
          };
          var origin = function (_v10) {
@@ -12966,7 +12981,7 @@ Elm.Stamps.make = function (_elm) {
                {case "_Tuple3":
                   return _v10._0;}
                _U.badCase($moduleName,
-               "on line 206, column 31 to 32");
+               "on line 320, column 31 to 32");
             }();
          };
          var form = $Graphics$Collage.group(A2($List.map,
@@ -13038,6 +13053,39 @@ Elm.Stamps.make = function (_elm) {
          return innerFunction;
       }();
    };
+   var adjacentFlip = function (shape) {
+      return function () {
+         var n = $List.length(shape);
+         var innerFunction = F2(function (side,
+         p) {
+            return function () {
+               var $ = $Util.sideToEdge(A2($Util.get,
+               side,
+               shape)),
+               s = $._0,
+               e = $._1;
+               var side$ = A2($Basics._op["%"],
+               $Util.odd(side) ? side + 1 : side - 1,
+               n);
+               var $ = $Util.sideToEdge(A2($Util.get,
+               side$,
+               shape)),
+               s$ = $._0,
+               e$ = $._1;
+               return {ctor: "_Tuple2"
+                      ,_0: side$
+                      ,_1: A2($Util.fromRelativeCoords,
+                      $Util.negateY(A2($Util.toRelativeCoords,
+                      p,
+                      {ctor: "_Tuple2",_0: s,_1: e})),
+                      {ctor: "_Tuple2"
+                      ,_0: s$
+                      ,_1: e$})};
+            }();
+         });
+         return innerFunction;
+      }();
+   };
    var adjacent = function (shape) {
       return function () {
          var n = $List.length(shape);
@@ -13066,6 +13114,82 @@ Elm.Stamps.make = function (_elm) {
                       {ctor: "_Tuple2"
                       ,_0: e$
                       ,_1: s$})};
+            }();
+         });
+         return innerFunction;
+      }();
+   };
+   var oppositeFlip1 = function (shape) {
+      return function () {
+         var n = $List.length(shape);
+         var innerFunction = F2(function (side,
+         p) {
+            return function () {
+               var $ = $Util.sideToEdge(A2($Util.get,
+               side,
+               shape)),
+               s = $._0,
+               e = $._1;
+               var side$ = A2($Basics._op["%"],
+               side + (n / 2 | 0),
+               n);
+               var $ = $Util.sideToEdge(A2($Util.get,
+               side$,
+               shape)),
+               s$ = $._0,
+               e$ = $._1;
+               return _U.eq(side,
+               0) || _U.eq(side$,
+               0) ? {ctor: "_Tuple2"
+                    ,_0: side$
+                    ,_1: A2($Util.fromRelativeCoords,
+                    $Util.negateY(A2($Util.toRelativeCoords,
+                    p,
+                    {ctor: "_Tuple2",_0: s,_1: e})),
+                    {ctor: "_Tuple2"
+                    ,_0: s$
+                    ,_1: e$})} : {ctor: "_Tuple2"
+                                 ,_0: side$
+                                 ,_1: A2($Util.fromRelativeCoords,
+                                 A2($Util.toRelativeCoords,
+                                 p,
+                                 {ctor: "_Tuple2",_0: s,_1: e}),
+                                 {ctor: "_Tuple2"
+                                 ,_0: e$
+                                 ,_1: s$})};
+            }();
+         });
+         return innerFunction;
+      }();
+   };
+   var oppositeFlip = function (shape) {
+      return function () {
+         var n = $List.length(shape);
+         var innerFunction = F2(function (side,
+         p) {
+            return function () {
+               var $ = $Util.sideToEdge(A2($Util.get,
+               side,
+               shape)),
+               s = $._0,
+               e = $._1;
+               var side$ = A2($Basics._op["%"],
+               side + (n / 2 | 0),
+               n);
+               var $ = $Util.sideToEdge(A2($Util.get,
+               side$,
+               shape)),
+               s$ = $._0,
+               e$ = $._1;
+               return {ctor: "_Tuple2"
+                      ,_0: side$
+                      ,_1: A2($Util.fromRelativeCoords,
+                      $Util.negateY(A2($Util.toRelativeCoords,
+                      p,
+                      {ctor: "_Tuple2",_0: s,_1: e})),
+                      {ctor: "_Tuple2"
+                      ,_0: s$
+                      ,_1: e$})};
             }();
          });
          return innerFunction;
@@ -13342,14 +13466,16 @@ Elm.Stamps.make = function (_elm) {
                 ,shape: shape};
       }();
    });
-   var makeSquarePattern = F2(function (sideLen,
+   var makeHex3Pattern = F2(function (sideLen,
    rotation) {
       return function () {
          var angles = A2($List.map,
          function (x) {
-            return $Basics.pi * x / 2 + rotation;
+            return 2 * $Basics.pi * x / 3 - $Basics.pi / 6 + rotation;
          },
-         _L.range(1,4));
+         _L.range(1,3));
+         var chordLen = $Basics.sqrt(2 * Math.pow(sideLen,
+         2) * (1 - $Basics.cos($Util.exteriorAngle(6))));
          var neighbors = function (_v44) {
             return function () {
                switch (_v44.ctor)
@@ -13358,15 +13484,58 @@ Elm.Stamps.make = function (_elm) {
                     function (x) {
                        return {ctor: "_Tuple3"
                               ,_0: A3(makePoint,
+                              chordLen,
+                              x,
+                              A2($Util._op[".+"],
+                              _v44._0,
+                              A3(makePoint,
+                              chordLen,
+                              _v44._1 + $Basics.pi / 6,
+                              {ctor: "_Tuple2",_0: 0,_1: 0})))
+                              ,_1: $Util.rem2pi(rotation + _v44._1 + 2 * $Basics.pi / 3)
+                              ,_2: 0};
+                    },
+                    angles);}
+               _U.badCase($moduleName,
+               "on line 72, column 36 to 167");
+            }();
+         };
+         return $Set.toList(A3(addNeighbors,
+         neighbors,
+         _L.fromArray([{ctor: "_Tuple3"
+                       ,_0: {ctor: "_Tuple2"
+                            ,_0: 0
+                            ,_1: 0}
+                       ,_1: rotation
+                       ,_2: 0}]),
+         $Set.empty));
+      }();
+   });
+   var makeSquarePattern = F2(function (sideLen,
+   rotation) {
+      return function () {
+         var angles = A2($List.map,
+         function (x) {
+            return $Basics.pi * x / 2 + rotation;
+         },
+         _L.range(1,4));
+         var neighbors = function (_v49) {
+            return function () {
+               switch (_v49.ctor)
+               {case "_Tuple3":
+                  return A2($List.map,
+                    function (x) {
+                       return {ctor: "_Tuple3"
+                              ,_0: A3(makePoint,
                               sideLen,
                               x,
-                              _v44._0)
+                              _v49._0)
                               ,_1: rotation
                               ,_2: 0};
                     },
                     angles);}
                _U.badCase($moduleName,
-               "on line 72, column 34 to 100");
+               "on line 83, column 34 to 100");
             }();
          };
          return $Set.toList(A3(addNeighbors,
@@ -13403,9 +13572,9 @@ Elm.Stamps.make = function (_elm) {
             return $Basics.pi * x / 2 + $Basics.pi / 4 + rotation;
          },
          _L.range(1,4));
-         var neighbors = function (_v49) {
+         var neighbors = function (_v54) {
             return function () {
-               switch (_v49.ctor)
+               switch (_v54.ctor)
                {case "_Tuple3":
                   return A2($List.map,
                     function (x) {
@@ -13414,17 +13583,17 @@ Elm.Stamps.make = function (_elm) {
                               chordLen,
                               x,
                               A2($Util._op[".+"],
-                              _v49._0,
+                              _v54._0,
                               A3(makePoint,
                               chordLen,
-                              _v49._1 + $Basics.pi / 4,
+                              _v54._1 + $Basics.pi / 4,
                               {ctor: "_Tuple2",_0: 0,_1: 0})))
-                              ,_1: $Util.rem2pi(_v49._1 + rotation + $Basics.pi)
+                              ,_1: $Util.rem2pi(_v54._1 + rotation + $Basics.pi)
                               ,_2: 0};
                     },
                     angles);}
                _U.badCase($moduleName,
-               "on line 82, column 36 to 163");
+               "on line 93, column 36 to 163");
             }();
          };
          return $Set.toList(A3(addNeighbors,
@@ -13452,30 +13621,209 @@ Elm.Stamps.make = function (_elm) {
                 ,shape: shape};
       }();
    });
+   var makeSquare3Pattern = F2(function (sideLen,
+   rotation) {
+      return function () {
+         var chordLen = sideLen * $Basics.sqrt(2);
+         var angles = A2($List.map,
+         function (x) {
+            return $Basics.pi * x / 2 + $Basics.pi / 4 + rotation;
+         },
+         _L.range(1,4));
+         var neighbors = function (_v59) {
+            return function () {
+               switch (_v59.ctor)
+               {case "_Tuple3":
+                  return A2($List.map,
+                    function (x) {
+                       return {ctor: "_Tuple3"
+                              ,_0: A3(makePoint,
+                              chordLen,
+                              x,
+                              A2($Util._op[".+"],
+                              _v59._0,
+                              A3(makePoint,
+                              chordLen,
+                              _v59._1 + $Basics.pi / 4,
+                              {ctor: "_Tuple2",_0: 0,_1: 0})))
+                              ,_1: $Util.rem2pi(rotation + _v59._1 + $Basics.pi)
+                              ,_2: 0};
+                    },
+                    angles);}
+               _U.badCase($moduleName,
+               "on line 103, column 36 to 163");
+            }();
+         };
+         return $Set.toList(A3(addNeighbors,
+         neighbors,
+         _L.fromArray([{ctor: "_Tuple3"
+                       ,_0: {ctor: "_Tuple2"
+                            ,_0: 0
+                            ,_1: 0}
+                       ,_1: rotation
+                       ,_2: 0}]),
+         $Set.empty));
+      }();
+   });
+   var makeSquare3Stamp = F2(function (size,
+   rotation) {
+      return function () {
+         var pattern = A2(makeSquare3Pattern,
+         size,
+         rotation);
+         var shape = A2(ngon,4,size);
+         var link = oppositeFlip(shape);
+         return {_: {}
+                ,link: link
+                ,pattern: pattern
+                ,shape: shape};
+      }();
+   });
+   var makeSquare4Pattern = F2(function (sideLen,
+   rotation) {
+      return function () {
+         var chordLen = sideLen * $Basics.sqrt(2);
+         var angles = A2($List.map,
+         function (x) {
+            return $Basics.pi * x / 2 + $Basics.pi / 4 + rotation;
+         },
+         _L.range(1,4));
+         var neighbors = function (_v64) {
+            return function () {
+               switch (_v64.ctor)
+               {case "_Tuple3":
+                  return A2($List.map,
+                    function (x) {
+                       return {ctor: "_Tuple3"
+                              ,_0: A3(makePoint,
+                              chordLen,
+                              x,
+                              A2($Util._op[".+"],
+                              _v64._0,
+                              A3(makePoint,
+                              chordLen,
+                              $Basics.pi / 4,
+                              {ctor: "_Tuple2"
+                              ,_0: 0 - sideLen
+                              ,_1: 0 - sideLen})))
+                              ,_1: rotation
+                              ,_2: 0};
+                    },
+                    angles);}
+               _U.badCase($moduleName,
+               "on line 113, column 34 to 155");
+            }();
+         };
+         return $Set.toList(A3(addNeighbors,
+         neighbors,
+         _L.fromArray([{ctor: "_Tuple3"
+                       ,_0: {ctor: "_Tuple2"
+                            ,_0: 0
+                            ,_1: 0}
+                       ,_1: rotation
+                       ,_2: 0}]),
+         $Set.empty));
+      }();
+   });
+   var makeSquare4Stamp = F2(function (size,
+   rotation) {
+      return function () {
+         var pattern = A2(makeSquare4Pattern,
+         size,
+         rotation);
+         var shape = A2(ngon,4,size);
+         var link = adjacentFlip(shape);
+         return {_: {}
+                ,link: link
+                ,pattern: pattern
+                ,shape: shape};
+      }();
+   });
+   var makeSquare5Pattern = F2(function (sideLen,
+   rotation) {
+      return function () {
+         var chordLen = sideLen * $Basics.sqrt(2);
+         var angles = A2($List.map,
+         function (x) {
+            return $Basics.pi * x / 2 + $Basics.pi / 4 + rotation;
+         },
+         _L.range(1,4));
+         var neighbors = function (_v69) {
+            return function () {
+               switch (_v69.ctor)
+               {case "_Tuple3":
+                  return A2($List.map,
+                    function (x) {
+                       return {ctor: "_Tuple3"
+                              ,_0: A3(makePoint,
+                              chordLen,
+                              x,
+                              _U.eq(_v69._2,
+                              1) ? _v69._0 : A2($Util._op[".+"],
+                              _v69._0,
+                              A3(makePoint,
+                              sideLen,
+                              $Basics.pi,
+                              {ctor: "_Tuple2",_0: 0,_1: 0})))
+                              ,_1: rotation
+                              ,_2: A2($Basics._op["%"],
+                              _v69._2 + 1,
+                              2)};
+                    },
+                    angles);}
+               _U.badCase($moduleName,
+               "on line 123, column 40 to 186");
+            }();
+         };
+         return $Set.toList(A3(addNeighbors,
+         neighbors,
+         _L.fromArray([{ctor: "_Tuple3"
+                       ,_0: {ctor: "_Tuple2"
+                            ,_0: 0
+                            ,_1: 0}
+                       ,_1: rotation
+                       ,_2: 0}]),
+         $Set.empty));
+      }();
+   });
+   var makeSquare5Stamp = F2(function (size,
+   rotation) {
+      return function () {
+         var pattern = A2(makeSquare5Pattern,
+         size,
+         rotation);
+         var shape = A2(ngon,4,size);
+         var link = oppositeFlip1(shape);
+         return {_: {}
+                ,link: link
+                ,pattern: pattern
+                ,shape: shape};
+      }();
+   });
    var makeTrianglePattern = F2(function (sideLen,
    rotation) {
       return function () {
-         var orient = function (_v54) {
+         var orient = function (_v74) {
             return function () {
-               switch (_v54.ctor)
+               switch (_v74.ctor)
                {case "::":
-                  switch (_v54._1.ctor)
+                  switch (_v74._1.ctor)
                     {case "::":
-                       switch (_v54._1._1.ctor)
+                       switch (_v74._1._1.ctor)
                          {case "::":
                             return _L.fromArray([{ctor: "_Tuple2"
-                                                 ,_0: _v54._0
+                                                 ,_0: _v74._0
                                                  ,_1: 1}
                                                 ,{ctor: "_Tuple2"
-                                                 ,_0: _v54._1._0
+                                                 ,_0: _v74._1._0
                                                  ,_1: 1}
                                                 ,{ctor: "_Tuple2"
-                                                 ,_0: _v54._1._1._0
+                                                 ,_0: _v74._1._1._0
                                                  ,_1: 0}]);}
                          break;}
                     break;}
                _U.badCase($moduleName,
-               "on line 92, column 31 to 52");
+               "on line 134, column 31 to 52");
             }();
          };
          var angles = A2($List.map,
@@ -13483,34 +13831,34 @@ Elm.Stamps.make = function (_elm) {
             return $Basics.pi * x * 2 / 3 + rotation;
          },
          _L.range(1,3));
-         var neighbors = function (_v62) {
+         var neighbors = function (_v82) {
             return function () {
-               switch (_v62.ctor)
+               switch (_v82.ctor)
                {case "_Tuple3":
-                  switch (_v62._0.ctor)
+                  switch (_v82._0.ctor)
                     {case "_Tuple2":
-                       return $List.map(function (_v69) {
+                       return $List.map(function (_v89) {
                             return function () {
-                               switch (_v69.ctor)
+                               switch (_v89.ctor)
                                {case "_Tuple2":
                                   return {ctor: "_Tuple3"
                                          ,_0: A3(makePoint,
                                          sideLen,
-                                         _v69._0,
+                                         _v89._0,
                                          {ctor: "_Tuple2"
-                                         ,_0: _v62._0._0
-                                         ,_1: _v62._0._1})
+                                         ,_0: _v82._0._0
+                                         ,_1: _v82._0._1})
                                          ,_1: rotation
                                          ,_2: A2($Basics._op["%"],
-                                         _v69._1 + _v62._2,
+                                         _v89._1 + _v82._2,
                                          2)};}
                                _U.badCase($moduleName,
-                               "on line 94, column 80 to 141");
+                               "on line 136, column 80 to 141");
                             }();
                          })(orient(angles));}
                     break;}
                _U.badCase($moduleName,
-               "on line 94, column 48 to 161");
+               "on line 136, column 48 to 161");
             }();
          };
          return $Set.toList(A3(addNeighbors,
@@ -13545,16 +13893,26 @@ Elm.Stamps.make = function (_elm) {
                         ,addNeighbors: addNeighbors
                         ,makeHexPattern: makeHexPattern
                         ,makeHex2Pattern: makeHex2Pattern
+                        ,makeHex3Pattern: makeHex3Pattern
                         ,makeSquarePattern: makeSquarePattern
                         ,makeSquare2Pattern: makeSquare2Pattern
+                        ,makeSquare3Pattern: makeSquare3Pattern
+                        ,makeSquare4Pattern: makeSquare4Pattern
+                        ,makeSquare5Pattern: makeSquare5Pattern
                         ,makeTrianglePattern: makeTrianglePattern
                         ,opposite: opposite
+                        ,oppositeFlip: oppositeFlip
+                        ,oppositeFlip1: oppositeFlip1
                         ,adjacent: adjacent
+                        ,adjacentFlip: adjacentFlip
                         ,makeTriangleLink: makeTriangleLink
                         ,makeHexStamp: makeHexStamp
                         ,makeHex2Stamp: makeHex2Stamp
                         ,makeSquareStamp: makeSquareStamp
                         ,makeSquare2Stamp: makeSquare2Stamp
+                        ,makeSquare3Stamp: makeSquare3Stamp
+                        ,makeSquare4Stamp: makeSquare4Stamp
+                        ,makeSquare5Stamp: makeSquare5Stamp
                         ,makeTriangleStamp: makeTriangleStamp
                         ,emptyStamp: emptyStamp
                         ,drawPolygon: drawPolygon
